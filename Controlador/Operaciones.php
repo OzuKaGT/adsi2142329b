@@ -57,4 +57,31 @@ if (isset($_POST['maximo'])){
 }
 
 
+//----------------------------------------- M I N I M O  -----------------------------------------------------
+
+if (isset($_POST['minimo'])){
+    $digMn=$_POST['Digitos'];
+
+    function menor($digMn){
+        $mini=0;
+        for ($i=0; $i < count($digMn); $i++) { 
+            $mini= min($digMn);
+        }
+        return $mini;
+    }
+
+    $numMn=array();
+
+    for ($i=0; $i < $digMn; $i++) { 
+        $numMn[$i]=rand(0,$digMn);
+    }
+
+    for ($i=0; $i < $digMn; $i++) { 
+        echo $numMn[$i]. ',';
+    }
+    echo '<br> El numero menor es ='. menor($numMn).'<br>';
+    echo '<form action="../Vista/Index.php">
+            <input type="submit" value="Volver al inicio">
+          </form>';
+}
 ?>
