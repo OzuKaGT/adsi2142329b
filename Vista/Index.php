@@ -9,7 +9,7 @@
     <title> Formulario tema 1 </title>
 </head>
 <body>
-    <form action="" method="post">
+    <form action="../Controlador/Operaciones.php" method="post">
         <div class="DivisorF">
             <h2 id="TituloG"> Formulario Operaciones Matematicas </h2>
             <legend id="Subtitulo"> Ingrese los digitos que quiere que sean arrojados aleatoriamente </legend><br><br>
