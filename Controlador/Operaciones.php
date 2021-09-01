@@ -84,4 +84,33 @@ if (isset($_POST['minimo'])){
             <input type="submit" value="Volver al inicio">
           </form>';
 }
+
+
+//----------------------------------------- M E D I A -----------------------------------------------------
+
+if (isset($_POST['media'])){
+    $digMd=$_POST['Digitos'];
+
+    function media($digMd){
+        $medi=0;
+        for ($i=1; $i < count($digMd); $i++) { 
+            $medi = array_sum($digMd)/count($digMd);
+        }
+        return $medi;
+    }
+
+    $numMd=array();
+
+    for ($i=0; $i < $digMd; $i++) { 
+        $numMd[$i]=rand(0,$digMd);
+    }
+
+    for ($i=0; $i < $digMd; $i++) { 
+        echo $numMd[$i]. ',';
+    }
+    echo '<br> La media de los numeros es ='. media($numMd).'<br>';
+    echo '<form action="../Vista/Index.php">
+            <input type="submit" value="Volver al inicio">
+          </form>';
+}
 ?>
