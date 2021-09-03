@@ -61,6 +61,7 @@ $ob -> setter("nombre", "Carlitos");
 $ob -> setter("documento", "12121212");
 $ob -> setter("ficha", "000000");
 
+
 //Sets separados
 
 /*$ob -> setNombre("Pepito");
