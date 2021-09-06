@@ -59,21 +59,22 @@ include ('ClaseB.php');
 
     class Revista extends Materiales{
     
-        public function __construct($editorial, $tipoMaterial, $codigo, $autor, $titulo, $año, $status){
+        public function __construct($tipoMaterial, $codigo, $autor, $titulo, $año, $status){
             parent::__construct($tipoMaterial, $codigo, $autor, $titulo, $año, $status);
         }
     
-        public function setterL($atributo, $valor){
+        public function setterR($atributo, $valor){
             $this->$atributo=$valor;
         }
     
-        public function getterL($atributo){
+        public function getterR($atributo){
             return $this->$atributo;
         }
     
-        public function MostrarLibro(){
-            echo "El nombre del libro es ".$this->titulo. ". Fué escrito por el autor ".$this->autor. "y posteriormente distribuido por la editorial ".$this->editorial. 
-            "El genero al que pertenece este libro es ".$this->tipoMaterial. " se publicó en el año ".$this->año. "su codigo para la compra es ".$this->codigo. " y en esta en estado ".$this->status." ";
+        public function MostrarRevista(){
+            echo "<p style='font-size: 22px'> El nombre de la revista es <b>".$this->titulo. "</b>. <br> Fué escrito por el autor <b>".$this->autor. "</b>. <br> El genero al que pertenece esta revista es <b>".
+            $this->tipoMaterial. "</b>.  <br> Se publicó en el año <b>".$this->año. "</b>.  <br> Su codigo para la compra es <b>".$this->codigo. "</b>. <br> Se encuentra en estado <b>".
+            $this->status."</b></p>.";
         }
     }
 ?>

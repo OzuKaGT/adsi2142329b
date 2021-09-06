@@ -10,6 +10,7 @@
     <section>
         <center>
             <h1 style="font-size:30px;"> Biblioteca "Como dice el dicho" </h1>
+            <h1 style="font-size:30px;"> LIBROS </h1>
             <?php
             
                 include_once ('ClaseM.php');
@@ -63,6 +64,9 @@
                 echo "<br>";
 
             ?>
+        <form action="InicioRevistas.php">
+            <input type="submit" value="Ver revistas">
+        </form>
         </center>
     </section>
 </body>
