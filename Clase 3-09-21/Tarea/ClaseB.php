@@ -1,36 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> Bibliotecas </title>
+</head>
+<body>
+<center>
 <?php 
 
-    include_once ('InicioLibros.php');
+include_once ('InicioLibros.php');
 
-    include_once ('InicioRevistas.php');
+include_once ('InicioRevistas.php');
 
-    class Biblioteca{
+class Biblioteca{
 
-        protected $coleccion;
+    protected $coleccion;
 
-        //metodos
+    //metodos
 
-        function __construct(){
-            $this->coleccion=array();
-        }   
+    function __construct(){
+        $this->coleccion=array();
+    }   
 
-        function adicionar($material){
-            array_push($this->coleccion, $material);
-        }
+    function adicionar($material){
+        array_push($this->coleccion, $material);
+    }
 
-        function verMaterialesL(){
-            for ($i=0; $i < count($this->coleccion) ; $i++) { 
-                echo $this->coleccion[$i]->Mostrarclase();
-                echo $this->coleccion[$i]->MostrarLibro();
-            }
-        }
-        
-        function verMaterialesR(){
-            for ($i=0; $i < count($this->coleccion) ; $i++) { 
-                echo $this->coleccion[$i]->MostrarRevista();
-            }
+    function verMaterialesL(){
+        for ($i=0; $i < count($this->coleccion) ; $i++) { 
+            echo $this->coleccion[$i]->Mostrarclase();
+            echo $this->coleccion[$i]->MostrarLibro();
         }
     }
+    
+    function verMaterialesR(){
+        for ($i=0; $i < count($this->coleccion) ; $i++) { 
+            echo $this->coleccion[$i]->MostrarRevista();
+        }
+    }
+}
 
 //AGREGAR LIBRO
 
@@ -56,3 +66,6 @@ $biblio2->adicionar($re3);
 
 $biblio2->verMaterialesR();
 ?>
+</center>
+</body>
+</html>
