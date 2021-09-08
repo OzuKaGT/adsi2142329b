@@ -1,14 +1,14 @@
 <?php
 
-include ('ClaseB.php');
+include_once ('ClaseB.php');
 
     class Materiales{
-        private $tipoMaterial;
-        private $codigo;
-        private $autor;
-        private $titulo;
-        private $año;
-        private $status;
+        protected $tipoMaterial;
+        protected $codigo;
+        protected $autor;
+        protected $titulo;
+        protected $año;
+        protected $status;
 
         public function __construct($tipoMaterial, $codigo, $autor, $titulo, $año, $status){
             $this->tipoMaterial=$tipoMaterial;
@@ -51,7 +51,7 @@ include ('ClaseB.php');
         }
     
         public function MostrarLibro(){
-            echo "<p style='font-size: 20px'>Fue distribuido por la editorial <b>".$this->editorial."</b>.</p>";
+            echo "<p style='font-size: 20px'>Fue distribuido por la editorial <b>".$this->editorial."</b>.</p><br>";
         }
     }
 
