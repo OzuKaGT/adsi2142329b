@@ -7,7 +7,7 @@ function llenarVector(vector, tam){
 
 let vec=new Array();
 
-let x=5;
+let x=6;
 
 console.log(llenarVector(vec,x));
 
@@ -66,8 +66,6 @@ var nMenorVector=(vector)=>{
 console.log('el numero menor del vector es..'+nMenorVector(vec));
 
 var MedianaVector=(vector)=>{
-
-    let l=0;
 
     for (let i = 0; i < vector.length; i++) {
         
