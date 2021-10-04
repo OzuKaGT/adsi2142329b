@@ -46,9 +46,12 @@ console.log(arreglo)
 
 //3ra forma de trabajar con objetos en JS 
 
-function Aprendiz(){
-    var nombre='Maria';
-    var apellido='Rodriguez';
+function Aprendiz(nombre, apellido){
+    this.nombre=nombre;
+    this.apellido=apellido;
+    this.nombreCompleto=function(){
+        
+    }
 }
 
 //console.log(typeof(alumno));
@@ -97,3 +100,11 @@ console.log(frac.divi());
 // console.log(typeof(num));
 // var t='palabra';
 // console.log(typeof(t));
+
+//4ta forma de crear un objeto
+class Estudiante{
+    constructor(nombre, apellido){
+        this.nombre=nombre;
+        this.apellido=apellido;
+    }
+}
