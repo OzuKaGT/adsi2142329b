@@ -62,14 +62,15 @@ console.log(zona);
 
 // ------------------- COMPOSICION ---------------------
 
-class Usuarios {
-    constructor(idUsuario, Nombres, Apellidos, Fecha, Telefono, Correo, Contraseña){
-        this._idUsuario=idUsuario;
-        this._Nombres=Nombres;
-        this._Apellidos=Apellidos;
-        this._Fecha=Fecha;
-        this._Telefono=Telefono;
-        this._Correo=Correo;
-        this._Contraseña=Contraseña;
+class Zonas{
+    constructor(znas){
+        this._znas=znas;
     }
 }
+
+var zn1=new ZonasVerdes();
+var zn2=new ZonasVerdes(); 
+var misitio=[];
+misitio.push(zn2);
+misitio.push(zn1);
+mizona=new Zonas(misitio);
