@@ -38,9 +38,8 @@
           </ul>
         </li>
       </ul>
-      <form class="d-flex">
-        <input class="form-control me-2" type="search" placeholder="Usuarios" aria-label="Search">
-        <button class="btn btn-outline-success" type="submit">Buscar</button>
+      <form class="d-flex" action="Buscar.php" method="POST">
+        <button class="btn btn-outline-success" type="submit" name="botonBuscar" style="width: 120px;">Mostrar Peticiones</button>
       </form>
     </div>
   </div>
@@ -152,7 +151,7 @@
     </div>      
     </div>
     <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
-    <div id="trabajos" class="container pt-5 pb-5 aos-init aos-animate" data-aos="fade-up">
+    <div class="container pt-5 pb-5 aos-init aos-animate" data-aos="fade-up">
       <div class="row justify-content-center">
       <div class="col-lg-11">
       <div class="pb-5 pt-3 text-center"><p class="h2">¿Quieres solicitar mis <strong>servicios</strong>?</p>
@@ -163,30 +162,35 @@
       </div>
       <div class="row">
         <div class="cols-6 float-start align-items-center" style="width: 750px;height: 300px;">
-          <form action="">
+          <form action="../Controlador/AgregarController.php" method="POST">
             <div class="mb-3">
               <label class="form-label"><strong> Nombres </strong></label>
-              <input type="text" class="form-control" style="border: solid darkgray;">
+              <input type="text" name="nombres" class="form-control" placeholder="nombres" style="border: solid darkgray;">
             </div>
             <div class="mb-3">
+              <label class="form-label"><strong> Apellidos </strong></label>
+              <input type="text" name="apellidos" class="form-control" placeholder="apellidos" style="border: solid darkgray;">
+            </div>
+            <input type="hidden" name="oculto">
+            <div class="mb-3">
               <label for="exampleInputEmail1" class="form-label"><strong>Correo Electronico</strong></label>
-              <input type="email" class="form-control" aria-describedby="emailHelp" style="border: solid darkgray;">
+              <input type="email" name="correo" class="form-control" aria-describedby="emailHelp" placeholder="correo electronico" style="border: solid darkgray;">
               <div id="emailHelp" class="form-text"> <strong>No compartas tu correo con nadie. </strong></div>
             </div>
             <div class="mb-3">
               <label for="exampleInputPassword1" class="form-label"><strong>Peticion</strong></label>
-              <textarea class="form-control" cols="30" rows="10" style="border: solid darkgray;"></textarea>
+              <input type="text" class="form-control" name="petic"  style="border: solid darkgray;height: 150px;">
             </div>
-            <button type="submit" class="btn btn-primary">Enviar</button>
+            <input type="submit" name="enviar" value="Enviar" class="btn btn-primary">
           </form>
           </div>
           <br>
         </div>
     </main>
-    <br><br><br><br><br><br><br><br><br><br><br>
+    <br><br><br><br><br><br><br><br><br><br><br><br><br>
     <footer>
       <div class="container-fluid text-black h-120 text-center" style="background-color: #ecb061; z-index: 2;text-align: left;font-size: 35px;font-family: 'Montserrat', sans-serif;height: 100px;"><br><br>
-        <p style="font-size: 18px;margin-top: -60px;"> © Copyrights <strong> OzuKa </strong>. All Rights Reserved. </p>
+        <p style="font-size: 18px;margin-top: -60px;"> © Hecho Por <strong> OzuKa </strong>. 2021. </p>
       </div>
     </footer>
 </body>
