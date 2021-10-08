@@ -30,8 +30,15 @@ include '../Controlador/BuscarController.php';
         <li class="nav-item">
           <a class="nav-link active" aria-current="page" href="Index.html">Inicio</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="https://github.com/OzuKaGT/JavaScript">Trabajos JS</a>
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
+            Trabajos JS
+          </a>
+          <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:white;"> 
+            <li><a class="dropdown-item" href="JavaScript/FUNCIONES/Exe.html" style="background-color:white;">Funciones de Flecha</a></li>
+            <li><a class="dropdown-item" href="JavaScript/HERENCIAS/exe.html" style="background-color:white;">Herencias</a></li>
+            <li><a class="dropdown-item" href="JavaScript/POO/exe.html" style="background-color:white;">POO</a></li>
+          </ul>
         </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false" >
