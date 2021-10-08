@@ -51,9 +51,9 @@ include '../Controlador/BuscarController.php';
 </nav>
     </div>
     <main>
-    <div class="container pt-5 pb-5 mt-4 aos-init aos-animate" style="z-index: 2;text-align: center;font-size: 18px;font-family: 'Montserrat', sans-serif;height: 420px;width:100%; height:400%" data-aos="fade-up"><br><br>
+    <div class="container pt-5 pb-5 mt-4 aos-init aos-animate" style="z-index: 2;text-align: center;font-size: 18px;font-family: 'Montserrat', sans-serif;width:100%; height: 700px" data-aos="fade-up"><br><br>
     <h1 class="display-4"> Peticiones </h1><br>
-    <table class="table">
+    <table class="table" style="table-layout: fixed;table-layout: auto !important;max-width:100%;">
       <thead>
         <tr>
           <th scope="col">#ID</th>
@@ -69,11 +69,11 @@ include '../Controlador/BuscarController.php';
           foreach ($solicitudes as $dato) {
         ?>
         <tr>
-          <th scope="row"><?php echo $dato->IdSoli; ?></th>
+          <th><?php echo $dato->IdSoli; ?></th>
           <td><?php echo $dato->Nombres; ?></td>
           <td><?php echo $dato->Apellidos; ?></td>
           <td><?php echo $dato->Correo; ?></td>
-          <td class="container-xl"><?php echo $dato->Peticion; ?></td>
+          <td style="max-width:500px;overflow:hidden;"><?php echo $dato->Peticion; ?></td>
           <td><a href="Editar.php?id=<?php echo $dato->IdSoli; ?>" class="btn btn-primary"> Editar </a> &nbsp&nbsp
             <a href="../Controlador/EliminarController.php?id=<?php echo $dato->IdSoli; ?>" class="btn btn-danger"> Eliminar </a></td>
         </tr>
@@ -85,8 +85,8 @@ include '../Controlador/BuscarController.php';
     </div>
     </main>
     <footer>
-      <div class="container-fluid text-black text-center" style="background-color: #ecb061; z-index: 2;text-align: left;font-size: 35px;font-family: 'Montserrat', sans-serif;width: 100%; position:relative;"><br><br>
-      <p style="font-size: 18px;margin-top: -60px;"> © Hecho Por <strong> OzuKa </strong>. 2021. </p><br>
+      <div class="container-fluid text-black h-120 text-center" style="background-color: #ecb061; z-index: 2;text-align: left;font-size: 35px;font-family: 'Montserrat', sans-serif;height: 100px;"><br><br>
+        <p style="font-size: 18px;margin-top: -60px;"> © Hecho Por <strong> OzuKa </strong>. 2021. </p>
       </div>
     </footer>
 </body>
