@@ -55,11 +55,11 @@
     <main>
     <div class="container-fluid text-black h-120" style="background-color: #ecb061; z-index: 2;text-align: left;font-size: 35px;font-family: 'Montserrat', sans-serif;height: 500%;"><br><br>
       <div class="d-lg-flex align-items-center justify-content-between awrHeader--front text-center container">
-            <div class="col align-self-bottom align-items-right text-right h-max-380 position-relative z-index-1 d-none d-sm-block" style="margin-top: 10px;margin-bottom: 20px;"><img src="Imagenes/JSFlecha.jpg" class="rimg" width="300" height="300" alt="..." style="border-radius: 150px;"></div>
+            <div class="col align-self-bottom align-items-right text-right h-max-380 position-relative z-index-1 d-none d-sm-block" style="margin-top: 10px;margin-bottom: 20px;"><img src="Imagenes/Herencia.png" class="rimg" width="300" height="300" alt="..." style="border-radius: 150px;"></div>
             <div class="col pt-4 pb-4">
               <p>
                 <span class="display-4"> 
-                  POO en JS y operaciones con Fracciones
+                  Herencias JS
                 </span>
               </p>
         </div>
@@ -69,106 +69,89 @@
       <div class="row gap-y justify-content-center text-center">
         <div class="col-md-8">
             <div class="cols-4 float-start" style="width: 31%;">
-              <img src="Imagenes/ContenidoTec.png" class="card-img-top" alt="" style="margin-left: 300px;">
-              <div class="card-body" style="width:550px;height: 50px;font-size: 16px; margin-left: 140px;margin-top: 6px;">
+              <img src="Imagenes/ContenidoTec.png" class="card-img-top" alt="" style="margin-left: 265px;">
+              <div class="card-body" style="width:550px;height: 50px;font-size: 16px; margin-left: 150px;margin-top: 6px;">
                 <h5 class="card-title"><b>  Codigo Puro </b></h5>
                 <p class="card-text" style="text-align: justify;margin-top: 5px;">
                   <pre class="container-xl justify-content-center" style="max-width: 1100px;max-height: 500px;text-decoration: none;">
-                    function llenarVector(vector, tam){
-                      for (let i = 0; i < tam; i++) {
-                          vector.push(Math.round(Math.random()*11));
-                      }
-                      return vector;
-                    }
-                    
-                    let vec=new Array();
-                    
-                    let x=6;
-                    
-                    document.write('<b> VECTOR: </b>'+llenarVector(vec,x));
-                  
-                    document.write('<br><br>');
-                    
-                    //hoisting
-                    
-                    var sumaVector=(vector)=>{
-                    
-                        let suma=0;
-                    
-                        for (let i = 0; i < vector.length; i++) {
-                                suma += vec[i];
-                        }
-                        return suma;
-                    }
-                    
-                    document.write('<b> SUMA: </b> La suma de los valores del vector es .. ' +sumaVector(vec));
-                  
-                    document.write('<br><br>');
-                    
-                    var promedioVector=(vector)=>{
-                    
-                        let suma=0;
-                        let prom=0;
-                    
-                        for (let i = 0; i < vector.length; i++) {
-                                suma += vec[i];
-                                prom =Math.floor(suma / vector.length);
-                        }
-                        return prom;
-                    }
-                    
-                    document.write('<b> PROMEDIO: </b> El promedio de los valores del vector es .. '+promedioVector(vec));
-                  
-                    document.write('<br><br>');
-                    
-                    var nMayorVector=(vector)=>{
-                    
-                        let mayor=0;
-                    
-                        for (let i = 0; i < vector.length; i++) {
-                            mayor=Math.max(...vec);
-                        }
-                        return mayor;
-                    }
-                    
-                    document.write('<b> NUMERO MAYOR: </b> El numero mayor de los valores del vector es .. '+nMayorVector(vec));
-                  
-                    document.write('<br><br>');
-                    
-                    var nMenorVector=(vector)=>{
-                    
-                        let menor=0;
-                    
-                        for (let i = 0; i < vector.length; i++) {
-                            menor=Math.min(...vec);
-                        }
-                        return menor;
-                    }
-                    
-                    document.write('<b> NUMERO MENOR: </b> El numero menor de los valores del vector es .. '+nMenorVector(vec));
-                  
-                    document.write('<br><br>');
-                    
-                    var MedianaVector=(vector)=>{
-                    
-                        for (let i = 0; i < vector.length; i++) {
-                            
-                           if(vector.length%2 === 0){
-                                    index = vec.length/2; 
-                                    let valor1 = vec[index];
-                                    let valor2 = vec[index-1];
-                                    mediana = (valor1 + valor2)/2;
-                                }else{
-                                    index = vec.length/2; 
-                                    index = Math.floor(index);
-                                    mediana = vec[index];
-                                }
-                                return mediana;
-                        } 
-                    
-                    }
-                    
-                    document.write('<b> MEDIANA: </b> La mediana de los valores del vector es .. '+MedianaVector(vec));
+// ------------------- HERENCIA ---------------------
+
+class ZonasVerdes{
+    constructor(IdZona, Nombre){
+        this._IdZona=IdZona;
+        this._Nombre=Nombre;
+    }
+
+    set IdZona(IdZona){
+        this._IdZona=IdZona;
+    }
+
+    get IdZona(){
+        return this._IdZona;
+    }
+
+    set Nombre(Nombre){
+        this._Nombre=Nombre;
+    }
+
+    get Nombre(){
+        return this._Nombre;
+    }
+}
+
+class ZonasNaturales extends ZonasVerdes{
+    constructor (IdZona, Nombre, Ubicacion, Descripcion, Imagen){
+        super(IdZona, Nombre);
+        this._Ubicacion=Ubicacion;
+        this._Descripcion=Descripcion;
+        this._Imagen=Imagen;
+    }
+
+    set Ubicacion(Ubicacion){
+        this._Ubicacion=Ubicacion;
+    }
+
+    get Ubicacion(){
+        return this._Ubicacion;
+    }
+
+    set Descripcion(Descripcion){
+        this._Descripcion=Descripcion;
+    }
+
+    get Descripcion(){
+        return this._Descripcion;
+    }
+
+    set Imagen(Imagen){
+        this._Imagen=Imagen;
+    }
+
+    get Imagen(){
+        return this._Imagen;
+    }
+}
+
+zona=new ZonasNaturales(1, 'Boquemonte', 'Via Tequendama', 'Parque natural', 'https://i.ytimg.com/vi/a2JOp_I-_z4/maxresdefault.jpg');
+
+document.write('<b> HERENCIA: </b>'+zona);
+
+// ------------------- COMPOSICION ---------------------
+
+class Zonas{
+    constructor(znas){
+        this._znas=znas;
+    }
+}
+
+var zn1=new ZonasVerdes();
+var zn2=new ZonasVerdes(); 
+var misitio=[];
+misitio.push(zn2);
+misitio.push(zn1);
+mizona=new Zonas(misitio);
+
+document.write('<b> COMPOSICION: </b>'+mizona);
                   </pre>
                 </p> 
               </div>
@@ -176,7 +159,7 @@
                   <div class="card-body" style="width:600px;height: 50px;font-size: 16px; margin-left: 130px;margin-top: 550px;">
                     <h5 class="card-title"><b>  Resultado </b></h5>
                     <p class="card-text" style="text-align: justify;margin-top: 5px;">
-                      <script src="JavaScript/FUNCIONES/operaciones.js"></script>
+                      <script src="JavaScript/HERENCIAS/proyecto.js"></script>
                     </p>
             </div>
         </div>

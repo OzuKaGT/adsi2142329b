@@ -35,9 +35,9 @@ include '../Controlador/BuscarController.php';
             Trabajos JS
           </a>
           <ul class="dropdown-menu" aria-labelledby="navbarDropdown" style="background-color:white;"> 
-            <li><a class="dropdown-item" href="JavaScript/FUNCIONES/Exe.html" style="background-color:white;">Funciones de Flecha</a></li>
-            <li><a class="dropdown-item" href="JavaScript/HERENCIAS/exe.html" style="background-color:white;">Herencias</a></li>
-            <li><a class="dropdown-item" href="JavaScript/POO/exe.html" style="background-color:white;">POO</a></li>
+            <li><a class="dropdown-item" href="FuncionFlecha.html" style="background-color:white;">Funciones de Flecha</a></li>
+            <li><a class="dropdown-item" href="Herencia.html" style="background-color:white;">Herencias</a></li>
+            <li><a class="dropdown-item" href="POO.html" style="background-color:white;">POO</a></li>
           </ul>
         </li>
         <li class="nav-item dropdown">
