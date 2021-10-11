@@ -1,5 +1,5 @@
--	Si se desea mostrar el portafolio se debe clonar el repositorio https://github.com/OzuKaGT/adsi2142329b/tree/main/PORTAFOLIO, ya que aqui
-	se encuentran todos los componentes para su existencia y funcionamiento.
+﻿-	Si se desea mostrar el portafolio se debe clonar el repositorio 	https://github.com/OzuKaGT/adsi2142329b/tree/main/PORTAFOLIO, 
+	ya que aqui se encuentran todos los componentes para su existencia y funcionamiento.
 
 -	Para el funcionamiento del CRUD, en la carpeta de Modelo se encuentra el archivo portafolio.sql
 	el cual contiene la base de datos sobre la cual se desarrolla la actividad del portafolio.
@@ -10,5 +10,6 @@
 	
 -	En la carpeta de Controlador, se encuentran los archivos que permiten el funcionamiento del CRUD.
 
--	Para impedir desajustes en la pagina Buscar.php, en la cual se muestran los datos archivados en la base de datos, en la peticion
-	se debe digitar un texto de tamaño corto-medio.
+-	Para impedir desajustes en la pagina Buscar.php, en la cual se muestran los datos archivados en la base de datos, 		en la peticion se debe digitar un texto de tamaño corto-medio.
+
+-	En el apartado de trabajos se muestra el codigo JS del trabajo escogido en la barra de navegacion, seguido a esto 		se encuentra el resultado mostrado de la funcion de cada codigo proyectado en la propia pagina.
