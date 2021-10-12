@@ -1,15 +1,17 @@
-﻿-	Si se desea mostrar el portafolio se debe clonar el repositorio 	https://github.com/OzuKaGT/adsi2142329b/tree/main/PORTAFOLIO, 
-	ya que aqui se encuentran todos los componentes para su existencia y funcionamiento.
+﻿- Para el funcionamiento del portafolio se debe ingresar primero la base de datos. El archivo SQL se encuentra en la carpeta Modelo - Se le debe nombrar a la base de datos "portafolio".
 
--	Para el funcionamiento del CRUD, en la carpeta de Modelo se encuentra el archivo portafolio.sql
-	el cual contiene la base de datos sobre la cual se desarrolla la actividad del portafolio.
--	Tambien en esta carpeta de Modelo se encuentra la conexion a la base de datos.
+- Despues de haberse instalado la base de datos, para agregar peticiones, se debe ir a la parte de abajo del Index.html donde se encuentra un formulario para ingresar datos.
 
--	En la carpeta de Vista, se encuentra la pagina principal del sistema llamada Index.html,
-	los demas archivos son las anexadas para la facilidad de la navegacion en el sistema.
-	
--	En la carpeta de Controlador, se encuentran los archivos que permiten el funcionamiento del CRUD.
+- Si se quieren ver los datos de la base de datos, en la barra de navegacion se debe dar click al boton "Mostrar Peticiones"
 
--	Para impedir desajustes en la pagina Buscar.php, en la cual se muestran los datos archivados en la base de datos, 		en la peticion se debe digitar un texto de tamaño corto-medio.
+- En esa pagina se encuentran los botones "editar" y "eliminar" en frente de cada dato registrado. 
 
--	En el apartado de trabajos se muestra el codigo JS del trabajo escogido en la barra de navegacion, seguido a esto 		se encuentra el resultado mostrado de la funcion de cada codigo proyectado en la propia pagina.
+- El resto de opciones en la barra de navegacion son "Inicio", "Trabajos" y "Manuales".
+
+- El inicio sirve como boton para ir a la pagina principal.
+
+- Trabajos es una barra desplegable el cual nos da opciones para ver diferentes trabajos en JavaScript.
+
+- Manuales es tambien una barra desplegable que nos da la opcion de ver como se hace un manual de usuario y uno tecnico.
+
+Y eso seria todo principalmente. 
